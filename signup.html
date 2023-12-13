@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Lab</title>
+</head>
+<script>
+    function validateform(){
+        var name=document.myform.name.value;
+        var password=document.myform.password.value;
+        if (name==null||name==""){ 
+            alert("Name can't be blank"); 
+            return false;
+            }else if(password.length<6){
+                alert("Password must be at least 6 characters long."); 
+                return false;
+            }
+        }
+</script>
+<body>
+    <h1>Write a program to design a signup form to validate username and password using JavaScript.</h1>
+    <hr>
+    <form name="myform" method="post" action="action.php" onsubmit="return validateform()" >
+    Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="name"><br/><br>
+    Password: <input type="password" name="password"><br/> <br><br>
+    <input type="submit" value="Register">
+    </form>
+</body>
+</html>
